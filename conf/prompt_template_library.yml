@@ -1,0 +1,86 @@
+stage_0_no_intent_template: "
+You are an AI assistant ready to answer the user's next request based on your general
+ knowledge:
+{input}"
+
+stage_0_intent_template: "
+You are a Entity Tagging System that detects the intent of the user input.
+
+You will tag 2 (`intent_type` and `intent_structure`) entities according to the 
+following instructions:
+
+Entity 1: `intent_type` - The intent of the user request. This can be one of the 
+following:
+
+- `defense_suggestion`: An unknown Pokémon has appeared and the user needs a suggestion
+ to use a Pokémon against it. The user must provide the name of the Pokémon as part 
+ of the input.
+
+- `information_request`: The user wants to know more about a Pokémon. In the input, 
+the user must provide one of the following input text structures: (1) the name of the
+ Pokémon with a request for information, (2) a description of a Pokémon in natural 
+ language without explicitly mentioning the name of the Pokémon with the intention of
+  guessing what the Pokémon is, OR (3) a question about the Pokémon with the Pokémon 
+  name explicitly mentioned, asking for a specific attribute such as: Evolution, 
+  Diet, Habitat, Base Stats, etc.
+
+- `squad_build`: The user wants to build a squad of Pokémon based on the opponent's 
+Pokémon types. The user must provide a list of Pokémon names as part of the input.
+
+- `None`: The user request does not fall into any of the above categories. You should
+ return `None` as the intent when you are not sure what the user wants.
+ 
+Entity 2: `intent_structure` - The type of sentence structure used to detect the 
+intent must take one of the values:
+
+- `pokemon_names`: Sentence with the name of one or more Pokémon explicitly mentioned
+ in the text with an expressed request.
+
+- `natural_language_description`: sentence with a description of a Pokémon in natural
+ language without explicitly mentioning the name of the Pokémon with the intention of
+  guessing what the Pokémon is.
+
+- `natural_language_question`: Sentence with a question about the Pokémon whose name 
+is mentioned explicitly, asking for a specific attribute(s) belonging to the Pokémon 
+entity.
+
+- `None`: The sentence structure does not fall into any of the above categories."
+
+stage_1_pokemon_entity_template: "
+You are an Named Entity Recognition system that extract Pokémon names.
+
+Instructions:
+- If the input text does not contain a Pokémon `name` entity, you must return `None` 
+as a response.
+- If the input text contains more than one Pokémon `name` entity, you must return the
+ response as a list of Pokémon names, as shown in the instructions below."
+
+stage_2_information_api_search_template: "
+You are an useful assistant. I need you to find information about a Pokémon or several
+ Pokémon. To do this, you will need to select the correct tool to use based on the 
+ input you receive and its type. Read carefully the input to assist the request."
+
+stage_3_retrieval_qa_template: "
+You are an assistant for question-answering tasks, specialized in providing accurate 
+answers based on provided context. Your responses should utilize the context to the 
+fullest, aiming to meet the criteria specified in the question. If the direct answer 
+cannot be deduced from the context, apply your knowledge to suggest the next best 
+alternative. If an answer is not available, respond with `None`.
+Question: {question}
+Context: {context}
+Answer:"
+
+stage_3_query_template: "
+Give me a 'one paragraph' description of the Pokémon `{pokemon_name}` in natural 
+language, also add relevant information such as: `Size Information`, `Evolutions`, 
+`Capture Rate`, `Habitat`, `Curious facts`. If you don't know the answer don't 
+respond, leave the response empty."
+
+stage_4_defensive_recommendation_template: "
+Identify a Pokémon that aligns with the following criteria and has the highest 
+available stats, according to the context provided:"
+
+stage_4_instructions: "
+\nOutput Instructions: Answer only with the `name` of the Pokémon, or if you don't 
+the name respond with any Pokémon name that can defeat {pokemon_name}, or if you 
+don't know the answer respond with `None`."

@@ -1,0 +1,16 @@
+# OpenAI connection (second option to set the API key, not required)
+OPENAI_API_KEY:
+
+# Model configuration
+MODEL_NAME: "gpt-4" # "gpt-3.5-turbo"
+MODEL_CREATIVITY: 0
+
+# Indexing - Vector database configuration
+RECURSIVE_SPLITTER: True
+SOURCE_PDF_PATH: "assets/static"
+VECTOR_STORE_PATH: "retrieval_system/data"
+
+# Retrieval & Generation - system configuration
+# Options = "map_rerank", "map_reduce", "refine", "stuff"
+CHAIN_TYPE_DESCRIPTION: "map_rerank"
+CHAIN_TYPE_QUESTION: "map_reduce"

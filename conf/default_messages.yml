@@ -1,0 +1,62 @@
+# --- Default Responses ---
+
+base_llm_answer: "**:warning: Base LLM Generated Answer:** \n"
+
+alert_no_answer: "I'm sorry, as a language model AI, I don't have the answer to your 
+question. Please try with a different query."
+
+initial_responses:
+  response_1: "Based on my current knowledge, here's the information I have gathered:"
+  response_2: "Let me dive into the details for you. This is what I've discovered:"
+  response_3: "Your AI-Pokédex is at your service. From the data I've accessed, this 
+  is what I can share with you:"
+  response_4: "Allow me to fetch the insights you seek. Here's what I found:"
+  response_5: "I've looked into it, and here's the valuable information I've uncovered:"
+  response_6: "With a quick scan of my database, this is the knowledge I've compiled 
+  for you:"
+
+# --- Response templates ---
+
+pokemon_info_template: "
+### {name}\n
+
+**ID**: {id}\n
+
+**Stats**:
+- HP: {hp}\n
+- Speed: {speed}\n
+- Attack: {attack}\n
+- Special-Attack: {special_attack}\n
+- Defense: {defense}\n
+- Special-Defense: {special_defense}\n
+
+**Height**: {height}m  **Weight**: {weight}kg\n
+
+**Types**: {types}\n
+
+**Abilities**: {abilities}\n
+
+**Damage Relations**:\n
+- {damage_relations}\n
+"
+
+function_desc: "
+\n:brain: What can I do with this Retrieval-Augmented Pokédex system?\n
+
+This AI has 3 core functionalities:
+
+- Defense Suggestion: Provides recommendations for selecting an effective Pokémon to 
+use against an identified opponent, requiring the user to input the name of the 
+opposing Pokémon.
+
+- Information Request: Answers inquiries about Pokémon, accommodating various input 
+formats such as naming the Pokémon and requesting specific information, describing a 
+Pokémon to identify it, or asking detailed questions about a Pokémon's  
+characteristics like evolution or habitat.
+
+- Squad Build: Assists in assembling a team of Pokémon tailored to counter the types of 
+an opponent's Pokémon, requiring the user to list the names of the Pokémon they're 
+facing.
+
+\nWant to learn more?\n
+"

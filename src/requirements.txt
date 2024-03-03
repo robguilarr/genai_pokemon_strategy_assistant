@@ -1,0 +1,14 @@
+# pokepy -> require requests==2.10.0; langchain -> require requests>=2.31.0
+# Solution: Install first pokepy, then requirements.txt to overwrite versions
+langchain==0.1.4
+langchain-openai==0.0.5
+# langchainhub==0.1.14 # not required
+requests>=2.31.0
+PyYAML>=6.0.1
+openai==1.10
+pypdf==4.0.1
+faiss-cpu==1.7.4
+numpy==1.26.3
+fastapi==0.110.0
+uvicorn==0.27.1
+python-dotenv>=1.0.1
