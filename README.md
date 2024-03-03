@@ -3,7 +3,7 @@
 
 ## Overview
 
----
+
 
 This projects is an end-to-end architecture designed to enhance [Pokémon Go](https://pokemongolive.com/?hl=en) UX. Here 
 demonstrates a sequential process involving multiple Large Language Model (LLM) 
@@ -14,7 +14,7 @@ personalized responses.
  <img width="15%" height="15%" src="assets/static/pokemon_go.png">
 </p>
 
----
+
 
 ## Features
 - **End-to-End Architecture**: Integration of multiple LLM agents using a 
@@ -24,7 +24,7 @@ personalized responses.
 - **Pokémon-Focused Application**: Designed as a complementary strategy assitant for 
   Pokémon users.
 
----
+
 
 ## Tech Stack
 
@@ -42,7 +42,7 @@ personalized responses.
 - **Pokepy**: A Python wrapper for the Pokémon API, providing a simple way to access 
   Pokémon data through Pydantic model input schemas.
 
----
+
 
 ## Architecture
 
@@ -52,7 +52,7 @@ please visit my [website](https://www.robguilar.com/posts/genai_pokemon_strategy
 ![RAG Architecture](assets/static/flowchart.png)
   
 
----
+
 
 ## Getting Started
 
@@ -124,7 +124,7 @@ Run the Streamlit app using the following command:
 make display
 ```
 
----
+
 
 ## Usage examples
 
@@ -154,7 +154,7 @@ above categories.
 **Prompt examples**:
 
 | Intent Type         | Structure Type                 | Example                                                                                                                                            |
-|---------------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+||--|-|
 | defense_suggestion  | `any`                          | I stumbled upon a wild Grovyle lounging in the park! Which Pokemon should I choose for an epic battle to defeat it?                                |
 | information_request | `pokemon_names`                | Alright, Pokédex! It's time to find out everything about Snorlax and Pikachu!                                                                      |
 | information_request | `natural_language_question`    | Do you know in what kind of habitats I can find a Psyduck?                                                                                         |
@@ -191,4 +191,3 @@ Answer with `JSON mode` enabled:
 }
 ```
 
----
