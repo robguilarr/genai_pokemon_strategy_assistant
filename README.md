@@ -121,7 +121,7 @@ Display the Swagger UI documentation to see the available endpoints at:
 Run the Streamlit app using the following command:
 
 ```bash
-make display
+make display_ui
 ```
 
 
