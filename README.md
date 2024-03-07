@@ -154,7 +154,7 @@ above categories.
 **Prompt examples**:
 
 | Intent Type         | Structure Type                 | Example                                                                                                                                            |
-||--|-|
+|---------------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | defense_suggestion  | `any`                          | I stumbled upon a wild Grovyle lounging in the park! Which Pokemon should I choose for an epic battle to defeat it?                                |
 | information_request | `pokemon_names`                | Alright, Pokédex! It's time to find out everything about Snorlax and Pikachu!                                                                      |
 | information_request | `natural_language_question`    | Do you know in what kind of habitats I can find a Psyduck?                                                                                         |
