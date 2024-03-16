@@ -47,7 +47,7 @@ personalized responses.
 ## Architecture
 
 For an in-depth understanding of the architecture and to access the full article, 
-please visit my [website](https://www.robguilar.com/posts/genai_pokemon_strategy_assitant).
+please visit my [website](https://www.robguilar.com/posts/genai_pokemon_strategy_assistant).
 
 ![RAG Architecture](assets/static/flowchart.png)
   
@@ -121,7 +121,7 @@ Display the Swagger UI documentation to see the available endpoints at:
 Run the Streamlit app using the following command:
 
 ```bash
-make display
+make display_ui
 ```
 
 
@@ -154,7 +154,7 @@ above categories.
 **Prompt examples**:
 
 | Intent Type         | Structure Type                 | Example                                                                                                                                            |
-||--|-|
+|---------------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | defense_suggestion  | `any`                          | I stumbled upon a wild Grovyle lounging in the park! Which Pokemon should I choose for an epic battle to defeat it?                                |
 | information_request | `pokemon_names`                | Alright, Pokédex! It's time to find out everything about Snorlax and Pikachu!                                                                      |
 | information_request | `natural_language_question`    | Do you know in what kind of habitats I can find a Psyduck?                                                                                         |
