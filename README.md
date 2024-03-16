@@ -47,7 +47,7 @@ personalized responses.
 ## Architecture
 
 For an in-depth understanding of the architecture and to access the full article, 
-please visit my [website](https://www.robguilar.com/posts/genai_pokemon_strategy_assitant).
+please visit my [website](https://www.robguilar.com/posts/genai_pokemon_strategy_assistant).
 
 ![RAG Architecture](assets/static/flowchart.png)
   
