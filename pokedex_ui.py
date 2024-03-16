@@ -14,8 +14,8 @@ logger = logging.getLogger(__name__)
 with st.sidebar:
     display_json = st.radio("JSON Mode", [False, True], index=0)
     st.markdown(dedent(default_messages["function_desc"]))
-    "[Github Repository](https://github.com/robguilarr)"
-    "[![View the source code](https://img.shields.io/github/followers/robguilarr)](https://github.com/robguilarr)"
+    "[Github Repository](https://github.com/robguilarr/genai_pokemon_strategy_assistant/tree/master)"
+    "[![Author repository](https://img.shields.io/github/followers/robguilarr)](https://github.com/robguilarr)"
 
 
 col1, col2 = st.columns(spec=[0.1, 0.9])
